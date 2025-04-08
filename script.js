@@ -52,6 +52,16 @@ function initScrollAnimations() {
   }
   
 document.addEventListener('DOMContentLoaded', () => {
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('nav ul');
+    
+    if (menuToggle && navMenu) {
+      menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+      });
+    }
+
     initScrollAnimations();
     createFloatingShapes();
     createParticles();
@@ -130,4 +140,3 @@ function handleSubmit(event) {
     }, 2000);
   }, 1500);
 }
-  
